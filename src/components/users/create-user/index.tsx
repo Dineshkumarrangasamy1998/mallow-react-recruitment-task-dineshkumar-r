@@ -11,6 +11,7 @@ import {
 } from "../../../store/user/userSlice";
 import Endpoints from "../../../utils/endpoints";
 import { CreateUserProps, UserPayload } from "../../../model/userType";
+import { useAppNotification } from "../../../hooks/notification";
 
 const CreateUser: React.FC<CreateUserProps> = ({
   isVisible,
@@ -22,6 +23,7 @@ const CreateUser: React.FC<CreateUserProps> = ({
 
   const [form] = Form.useForm();
   const dispatch = useDispatch<AppDispatch>();
+  const { contextHolder, open } = useAppNotification();
 
   //callback for dependency
   const getUserById = useCallback(
@@ -71,10 +73,15 @@ const CreateUser: React.FC<CreateUserProps> = ({
         .put(`${Endpoints.users}/${userData}`, payload)
         .then((response) => {
           if (response && response.data) {
+            open("success", {
+              message: "User updated successfully",
+              description: `User ${response.data.first_name} ${response.data.last_name} has been updated.`,
+            });
             dispatch(loadUsers(1, 5));
           }
         })
         .catch((error) => {
+          open("error", { message: "Error updating user" });
           console.error("Error updating user:", error);
         })
         .finally(() => {
@@ -87,10 +94,15 @@ const CreateUser: React.FC<CreateUserProps> = ({
       createUser(payload)
         .then((response) => {
           if (response && response.data) {
+            open("success", {
+              message: "User created successfully",
+              description: `User ${response.data.first_name} ${response.data.last_name} has been created.`,
+            });
             dispatch(loadUsers(1, 5));
           }
         })
         .catch((error) => {
+          open("error", { message: "Error creating user" });
           console.error("Error creating user:", error);
         })
         .finally(() => {
@@ -110,6 +122,7 @@ const CreateUser: React.FC<CreateUserProps> = ({
 
   return (
     <>
+      {contextHolder}
       <Modal
         title={isEditMode ? "Edit User" : "Create New User"}
         open={isModalOpen}

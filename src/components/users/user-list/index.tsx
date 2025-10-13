@@ -12,6 +12,7 @@ import {
 } from "../../../store/user/userSlice";
 import { deleteUser } from "../../../services/user-services";
 import { loadUsers } from "../../../store/user/userActions";
+import { useAppNotification } from "../../../hooks/notification";
 
 const UserList: React.FC = () => {
   const [data, setData] = useState<User[]>([]);
@@ -21,6 +22,8 @@ const UserList: React.FC = () => {
   //get the user state from the redux store
   const userState = useSelector((state: RootState) => state.usersReducer);
   const dispatch = useDispatch<AppDispatch>();
+
+  const { contextHolder, open } = useAppNotification();
 
   useEffect(() => {
     setData(userState.users);
@@ -37,11 +40,16 @@ const UserList: React.FC = () => {
     dispatch(fetchUserListStart());
     deleteUser(id)
       .then(() => {
+        open("success", {
+          message: "User deleted successfully",
+          description: `User with ID ${id} has been deleted.`,
+        });
         dispatch(
           loadUsers(userState.pagination.current, userState.pagination.pageSize)
         );
       })
       .catch((error) => {
+        open("error", { message: "Error deleting user" });
         console.error("Error deleting user:", error);
       })
       .finally(() => {
@@ -129,6 +137,8 @@ const UserList: React.FC = () => {
 
   return (
     <Space direction="vertical" style={{ width: "100%" }}>
+      {/* render the notification context holder once inside your component tree */}
+      {contextHolder}
       <Table<User>
         rowKey="id"
         columns={columns}

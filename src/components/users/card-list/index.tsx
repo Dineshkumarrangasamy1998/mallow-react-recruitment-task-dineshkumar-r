@@ -12,6 +12,7 @@ import {
 } from "../../../store/user/userSlice";
 import CreateUser from "../create-user";
 import { User } from "../../../model/userType";
+import { useAppNotification } from "../../../hooks/notification";
 
 const CardUserList: React.FC = () => {
   const [data, setData] = useState<User[]>([]);
@@ -20,6 +21,7 @@ const CardUserList: React.FC = () => {
 
   const userState = useSelector((state: RootState) => state.usersReducer);
   const dispatch = useDispatch<AppDispatch>();
+  const { contextHolder, open } = useAppNotification();
 
   useEffect(() => {
     setData(userState.users);
@@ -36,11 +38,13 @@ const CardUserList: React.FC = () => {
     dispatch(fetchUserListStart());
     deleteUser(id)
       .then(() => {
+        open("success", { message: "User deleted successfully" });
         dispatch(
           loadUsers(userState.pagination.current, userState.pagination.pageSize)
         );
       })
       .catch((error) => {
+        open("error", { message: "Error deleting user" });
         console.error("Error deleting user:", error);
       })
       .finally(() => {
@@ -54,6 +58,7 @@ const CardUserList: React.FC = () => {
       style={{ padding: 20, backgroundColor: "#f0f2f5", width: "100%" }}
       size="large"
     >
+      {contextHolder}
       <Flex wrap="wrap" gap={30} justify="center">
         {data.map((user) => (
           <div
