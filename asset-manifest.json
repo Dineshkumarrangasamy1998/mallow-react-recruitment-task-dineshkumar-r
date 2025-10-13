@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/mallow_react_task_dineshkumar /static/css/main.2047d59e.css",
-    "main.js": "/mallow_react_task_dineshkumar /static/js/main.efd46e29.js",
-    "static/js/471.fed03649.chunk.js": "/mallow_react_task_dineshkumar /static/js/471.fed03649.chunk.js",
-    "static/js/113.ae3746b3.chunk.js": "/mallow_react_task_dineshkumar /static/js/113.ae3746b3.chunk.js",
-    "static/js/453.a4de5fb8.chunk.js": "/mallow_react_task_dineshkumar /static/js/453.a4de5fb8.chunk.js",
-    "static/js/847.216bba53.chunk.js": "/mallow_react_task_dineshkumar /static/js/847.216bba53.chunk.js",
-    "static/js/327.d0ab3c17.chunk.js": "/mallow_react_task_dineshkumar /static/js/327.d0ab3c17.chunk.js",
-    "static/js/414.9b496e65.chunk.js": "/mallow_react_task_dineshkumar /static/js/414.9b496e65.chunk.js",
-    "index.html": "/mallow_react_task_dineshkumar /index.html",
-    "main.2047d59e.css.map": "/mallow_react_task_dineshkumar /static/css/main.2047d59e.css.map",
-    "main.efd46e29.js.map": "/mallow_react_task_dineshkumar /static/js/main.efd46e29.js.map",
-    "471.fed03649.chunk.js.map": "/mallow_react_task_dineshkumar /static/js/471.fed03649.chunk.js.map",
-    "113.ae3746b3.chunk.js.map": "/mallow_react_task_dineshkumar /static/js/113.ae3746b3.chunk.js.map",
-    "453.a4de5fb8.chunk.js.map": "/mallow_react_task_dineshkumar /static/js/453.a4de5fb8.chunk.js.map",
-    "847.216bba53.chunk.js.map": "/mallow_react_task_dineshkumar /static/js/847.216bba53.chunk.js.map",
-    "327.d0ab3c17.chunk.js.map": "/mallow_react_task_dineshkumar /static/js/327.d0ab3c17.chunk.js.map",
-    "414.9b496e65.chunk.js.map": "/mallow_react_task_dineshkumar /static/js/414.9b496e65.chunk.js.map"
+    "main.css": "/mallow_react_task_dineshkumar/static/css/main.2047d59e.css",
+    "main.js": "/mallow_react_task_dineshkumar/static/js/main.ca593cfe.js",
+    "static/js/471.fed03649.chunk.js": "/mallow_react_task_dineshkumar/static/js/471.fed03649.chunk.js",
+    "static/js/113.ae3746b3.chunk.js": "/mallow_react_task_dineshkumar/static/js/113.ae3746b3.chunk.js",
+    "static/js/453.a4de5fb8.chunk.js": "/mallow_react_task_dineshkumar/static/js/453.a4de5fb8.chunk.js",
+    "static/js/847.216bba53.chunk.js": "/mallow_react_task_dineshkumar/static/js/847.216bba53.chunk.js",
+    "static/js/327.d0ab3c17.chunk.js": "/mallow_react_task_dineshkumar/static/js/327.d0ab3c17.chunk.js",
+    "static/js/414.9b496e65.chunk.js": "/mallow_react_task_dineshkumar/static/js/414.9b496e65.chunk.js",
+    "index.html": "/mallow_react_task_dineshkumar/index.html",
+    "main.2047d59e.css.map": "/mallow_react_task_dineshkumar/static/css/main.2047d59e.css.map",
+    "main.ca593cfe.js.map": "/mallow_react_task_dineshkumar/static/js/main.ca593cfe.js.map",
+    "471.fed03649.chunk.js.map": "/mallow_react_task_dineshkumar/static/js/471.fed03649.chunk.js.map",
+    "113.ae3746b3.chunk.js.map": "/mallow_react_task_dineshkumar/static/js/113.ae3746b3.chunk.js.map",
+    "453.a4de5fb8.chunk.js.map": "/mallow_react_task_dineshkumar/static/js/453.a4de5fb8.chunk.js.map",
+    "847.216bba53.chunk.js.map": "/mallow_react_task_dineshkumar/static/js/847.216bba53.chunk.js.map",
+    "327.d0ab3c17.chunk.js.map": "/mallow_react_task_dineshkumar/static/js/327.d0ab3c17.chunk.js.map",
+    "414.9b496e65.chunk.js.map": "/mallow_react_task_dineshkumar/static/js/414.9b496e65.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2047d59e.css",
-    "static/js/main.efd46e29.js"
+    "static/js/main.ca593cfe.js"
   ]
 }
