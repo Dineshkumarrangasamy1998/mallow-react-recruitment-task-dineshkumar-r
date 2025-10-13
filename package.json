@@ -1,5 +1,5 @@
 {
-  "homepage": "http://dineshkumarrangasamy1998.github.io/mallow_react_task_dineshkumar",
+  "homepage": "https://dineshkumarrangasamy1998.github.io/mallow_react_task_dineshkumar",
   "name": "crud-task",
   "version": "0.1.0",
   "private": true,
@@ -29,7 +29,7 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "build": "set PUBLIC_URL=/mallow_react_task_dineshkumar && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

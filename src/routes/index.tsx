@@ -28,7 +28,7 @@ const PublicRoute: React.FC<{ children: JSX.Element; redirectTo?: string }> = ({
 //protected router based on auth token
 const AppRouter: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'/mallow_react_task_dineshkumar'}>
       <Suspense fallback={<FullPageLoader visible={true} />}>
         <Routes>
           <Route path="/" element={<Navigate to="/users" replace />} />
