@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "set PUBLIC_URL=/mallow_react_task_dineshkumar && react-scripts build",
+    "build": "react-scripts build",
+    "postbuild": "copy build\\index.html build\\404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -5,12 +5,14 @@ import { LockOutlined } from "@ant-design/icons";
 import { handleLogin } from "../../services/login-services";
 import FullPageLoader from "../common/Loader";
 import { useNavigate } from "react-router-dom";
+import { useAppNotification } from "../../hooks/notification";
 
 const Login: React.FC = () => {
   const [loading, setLoading] = React.useState(false);
 
   const navigation = useNavigate();
   const [form] = Form.useForm();
+  const { contextHolder, open } = useAppNotification();
 
   // form submit
   const onFinish = (values: any) => {
@@ -20,7 +22,12 @@ const Login: React.FC = () => {
         setLoading(false);
         navigation("/users");
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        open("error", { message: "Login Failed: Invalid username or password" });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
   
   return (

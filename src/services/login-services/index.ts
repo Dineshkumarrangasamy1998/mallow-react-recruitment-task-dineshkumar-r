@@ -49,7 +49,7 @@ const logout = (): void => {
     .post(Endpoints.logout)
     .then(() => {
       localStorage.removeItem(Constants.TOKEN_KEY);
-      window.location.href = "/login";
+      window.location.href = "https://dineshkumarrangasamy1998.github.io/mallow_react_task_dineshkumar/";
     })
     .catch((error) => {
       console.error("Logout failed:", error);
