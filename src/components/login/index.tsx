@@ -23,7 +23,7 @@ const Login: React.FC = () => {
         navigation("/users");
       })
       .catch(() => {
-        open("error", { message: "Login Failed: Invalid username or password" });
+        open("error", { message: "Invalid username or password" });
       })
       .finally(() => {
         setLoading(false);
@@ -32,6 +32,7 @@ const Login: React.FC = () => {
   
   return (
     <React.Fragment>
+      {contextHolder}
       <FullPageLoader visible={loading} />
       <Row
         justify="center"
